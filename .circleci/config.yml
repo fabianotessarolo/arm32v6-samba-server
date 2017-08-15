@@ -20,15 +20,15 @@ jobs:
             - v1-{{ .Branch }}
           paths:
             - /caches/app.tar
-      - run:      
-          name: Enabling ARM
-          command: |
-            docker run --rm --privileged multiarch/qemu-user-static:register --reset		
       - run:
           name: Load Docker image layer cache
           command: |
             set +o pipefail
             docker load -i /caches/app.tar | true
+      - run:      
+          name: Enabling ARM
+          command: |
+            docker run --rm --privileged multiarch/qemu-user-static:register --reset            
       - run:
           name: Build application Docker image
           command: |
