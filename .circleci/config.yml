@@ -20,7 +20,7 @@ jobs:
             - v1-{{ .Branch }}
           paths:
             - /caches/app.tar
-       - run:      
+      - run:      
           name: Enabling ARM
           command: |
             docker run --rm --privileged multiarch/qemu-user-static:register --reset		
