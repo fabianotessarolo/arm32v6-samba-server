@@ -6,7 +6,8 @@ FROM resin/rpi-raspbian
 
 # update and install the base system
 RUN apt-get update && \  
-    apt-get -qy install samba samba-common-tools supervisor
+    apt-get -qy install samba supervisor
+#samba-common-tools
 #RUN apk update && apk upgrade && apk add samba samba-common-tools supervisor && rm -rf /var/cache/apk/*
 
 # create a dir for the config and the share
