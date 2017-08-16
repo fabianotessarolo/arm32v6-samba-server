@@ -1,5 +1,9 @@
-# samba-alpine
-A simple and super lightweight Samba docker container, based on the latest Alpine Linux base image 🐧🐋💻.
+# Docker ARM32v6 Samba Server
+
+## Automated Build Status
+[![CircleCI](https://circleci.com/gh/fabianotessarolo/docker-arm32v6-samba-server.svg?style=svg)](https://circleci.com/gh/fabianotessarolo/docker-arm32v6-samba-server)
+
+This is a simple Samba Docker Container based on hypriot/rpi-alpine:3.6 (Based on arm32v6/alpine:3.6) image.
 
 By default, the share will be accessible read-only for everyone, with write access for user "rio" with password "letsdance". See smb.conf for details, or feel free to use your own config (see below).
 
