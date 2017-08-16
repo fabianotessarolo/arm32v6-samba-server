@@ -1,4 +1,5 @@
-FROM arm32v6/alpine:3.5
+FROM resin/rpi-raspbian
+#FROM arm32v6/alpine:3.5
 
 # update the base system
 #ENV DEBIAN_FRONTEND noninteractive
