@@ -51,4 +51,5 @@ jobs:
                 docker tag app fabianotessarolo/docker-arm32v6-samba-server:latest
                 docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
                 docker push fabianotessarolo/docker-arm32v6-samba-server:$TAG
+                docker push fabianotessarolo/docker-arm32v6-samba-server:$latest
             fi
