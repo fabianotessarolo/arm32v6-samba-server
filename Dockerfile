@@ -1,14 +1,15 @@
-FROM resin/rpi-raspbian
+#FROM resin/rpi-raspbian
 #FROM arm32v6/alpine:3.5
+FROM hypriot/rpi-alpine
 
 # update the base system
 #ENV DEBIAN_FRONTEND noninteractive
 
 # update and install the base system
-RUN apt-get update && \  
-    apt-get -qy install samba supervisor
+#RUN apt-get update && \  
+#    apt-get -qy install samba supervisor
 #samba-common-tools
-#RUN apk update && apk upgrade && apk add samba samba-common-tools supervisor && rm -rf /var/cache/apk/*
+RUN apk update && apk upgrade && apk add samba samba-common-tools supervisor && rm -rf /var/cache/apk/*
 
 # create a dir for the config and the share
 RUN mkdir /config /shared
