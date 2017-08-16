@@ -5,10 +5,7 @@ FROM resin/rpi-raspbian
 #ENV DEBIAN_FRONTEND noninteractive
 
 # update the base system
-RUN apk update && apk upgrade
-
-# install samba and supervisord and clear the cache afterwards
-RUN apk add samba samba-common-tools supervisor && rm -rf /var/cache/apk/*
+RUN apk update && apk upgrade && apk add samba samba-common-tools supervisor && rm -rf /var/cache/apk/*
 
 # create a dir for the config and the share
 RUN mkdir /config /shared
